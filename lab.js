@@ -123,5 +123,25 @@ function printWorseGpaThanInfo(studentsToCompare) {
 // Problem 5.5
 // Call this function, passing in all 4 students as a single parameter
 // HINT: You'll need to modify the array before passing it in, or better yet, create a new temporary array to hold everyone
-students.push(me);
-printWorseGpaThanInfo(students);
+
+/*
+Problem 6: BankAccount
+
+Write a BankAccount class that can help you track your personal finances.
+The BankAccount class should satisfy the following requirements:
+- It should have a constructor that lets you pass in the initial cash value of your account as a parameter.
+- It should have a method 'withdraw' that lets you pass in a parameter that represents a cash value to subtract from your account.
+- It should have a method 'deposit' that lets you pass in a parameter that represents a cash value to add to your account.
+
+Challenge requirements:
+- Add code to your class that lets you keep track of the deposit history and the withdrawal history of your BankAccount using arrays.
+- Add code to your class that lets you keep track of the numper of deposits and the number of withdrawals in your BankAccount
+
+Problem 6.5
+
+Create an instance of your BankAccount class that initially has $22,000 in it.
+Withdraw $9,000
+Deposit $107,000
+
+Check to make sure that the result value of your bank account is $120,000 by accessing the contents of your object instance in the Dev Console.
+*/
