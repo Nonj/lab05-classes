@@ -134,17 +134,17 @@ class Person {
   }
     
   //return this Person's name
-  function getName() {
+  getName() {
      return this.firstName; //return own field
   }
   
   //grow a year
-  function haveBirthday() {
+  haveBirthday() {
     this.age++; //increase this person's age (accessing own field)
   }
 
   //a method that takes in a Person type as a parameter
-  function sayHello(otherPerson) {
+  sayHello(otherPerson) {
     //call method on parameter object for printing
     console.log("Hello, " + otherPerson.getName());
 
@@ -169,7 +169,7 @@ aliceObj.sayHello(bobObj);
 ```
 
 
-Hey, this syntax is _very, **very**_ similar to Java! Just like with JavaScript functions, most of our changes have involved getting rid of type declarations (and using `function` to declare functions). In fact, you can write a class in Java and then just delete a few words to make it a JavaScript class. That's what I just did...
+Hey, this syntax is _very, **very**_ similar to Java! Just like with JavaScript functions, most of our changes have involved getting rid of type declarations. In fact, you can write a class in Java and then just delete a few words to make it a JavaScript class. That's what I did...
 
 Things to notice:
 
@@ -179,6 +179,7 @@ Things to notice:
 - JavaScript classes always have only one **constructor** (if any), and the function is simply called `constructor()`. 
     - That's even clearer than Java, where you only know it's a constructor because it lacks a return type~
 - _Just like in Java_, JavaScript class methods are declared _inside_ the class declaration (inside the block, indenting one step).
+    - But note that we don't need to use the word `function` to indicate that they are a function, we just give the name & parameters. This is because the only things in the class are functions!
 - _Just like in Java_, JavaScript class methods can access (use) the object's field variables by referring to them as `this.fieldName`.
 - _Just like in Java_, we **instantiate** objects of the class's type by using the `new` keyword and then calling a method with the name of the class (e.g., `new Person()`).
 - _Just like in Java_, we call methods on objects by using **dot notation** (e.g., `object.methodName()`).
@@ -194,12 +195,12 @@ The other difference is that while in Java we usually define each class inside i
 
 //declare a class
 class Dog {
-  function bark() { /*...*/ }
+  bark() { /*...*/ }
 }
 
 //declare another class
 class Cat {
-  function meow() { /*...*/ }
+  meow() { /*...*/ }
 }
 
 //declare a (non-class) function
