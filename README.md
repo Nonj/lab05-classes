@@ -206,7 +206,7 @@ class Cat {
 function petAnimal(animal) { /*...*/ }
 
 //at the "main" level, instantiate the classes and call the functions
-Dog fido = new Dog();
+var fido = new Dog();
 petAnimal(fido); //pass this Dog object to the function
 ```
 
