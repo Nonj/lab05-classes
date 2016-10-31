@@ -145,3 +145,29 @@ Deposit $107,000
 
 Check to make sure that the result value of your bank account is $120,000 by accessing the contents of your object instance in the Dev Console.
 */
+
+class BankAccount {
+    constructor(initialBalance) {
+        this.balance = initialBalance;
+        this.withdrawalHistory = [];
+        this.depositHistory = [];
+        this.nWithdrawals = 0;
+        this.nDeposits = 0;
+    }
+
+    withdraw(amount) {
+        this.withdrawalHistory.push(amount);
+        this.balance -= amount;
+        this.nWithdrawals++;
+    }
+
+    deposit(amount) {
+        this.depositHistory.push(amount);
+        this.balance += amount;
+        this.nDeposits++;
+    }
+}
+
+var bankAccount = new BankAccount(22000);
+bankAccount.withdraw(9000);
+bankAccount.deposit(107000);
